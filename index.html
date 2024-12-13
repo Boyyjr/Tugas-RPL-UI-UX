@@ -7,9 +7,6 @@
     <title>Si Paling Warkop! - Company Profile</title>
 
     <style>
-        html {
-    scroll-behavior: smooth;
-        } 
         body {
             margin: 0;
             padding: 0;
@@ -167,7 +164,7 @@
             </div>
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none" aria-label="Toggle Menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -187,6 +184,18 @@
 
     <!-- Spacer for fixed navbar -->
     <div class="h-16"></div>
+
+    <!-- Hero Section with Background Image -->
+    <section id="hero" class="w-full h-64 md:h-96 bg-cover bg-center flex items-center justify-center"
+             style="background-image: url('cafe.jpg');">
+        <!-- Anda bisa mengganti URL di atas dengan URL gambar latar belakang Anda -->
+        <div class="bg-black bg-opacity-50 p-5 rounded">
+            <h1 class="text-3xl md:text-5xl text-white font-bold">Selamat Datang di Si Paling Warkop!</h1>
+            <p class="mt-4 text-lg md:text-xl text-white">
+                Nikmati kopi terbaik dengan suasana yang nyaman
+            </p>
+        </div>
+    </section>
 
     <!-- Header Section -->
     <header id="home" class="bg-transparent">
@@ -226,7 +235,7 @@
                 <p class="text-gray-600 mt-2">Perpaduan unik latte dan cendol tradisional. Rasanya fresh, cocok diminum sambil gibah sama teman-teman.</p>
             </div>
             <div class="menu-item">
-                <img src="rotbak.jpg" alt="Roti Bakar Si Paling Legit" class="w-full h-40 object-cover rounded">
+                <img src=".jpg" alt="Roti Bakar Si Paling Legit" class="w-full h-40 object-cover rounded">
                 <h3 class="text-xl font-semibold mt-4">Roti Bakar Si Paling Legit</h3>
                 <p class="text-gray-600 mt-2">Roti bakar varian coklat-keju yang bikin lo auto kebawa mimpi. Mau nugas atau chill, roti ini pas banget.</p>
             </div>
