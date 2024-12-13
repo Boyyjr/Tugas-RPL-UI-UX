@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Si Paling Warkop! - Company Profile</title>
+
+    <style>
+        html {
+    scroll-behavior: smooth;
+        } 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f8c9f8, #c7f0f4);
+            color: #333;
+        }
+
+        /* Custom Styles */
+        header {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 900;
+            margin: 0;
+            color: #333;
+        }
+
+        header p {
+            max-width: 600px;
+            margin: 20px auto 0;
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+
+        /* Tentang Kami */
+        section#tentang {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section#tentang h2 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        section#tentang p {
+            font-size: 1em;
+            line-height: 1.8em;
+            margin-bottom: 30px;
+        }
+
+        /* Menu Favorite */
+        section#menu {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section#menu h2 {
+            text-align: center;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.3em;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        /* Social Media / Kontak */
+        section#kontak {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section#kontak h2 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.5em; }
+            header p, section#tentang p { font-size: 1em; }
+            .menu-item { width: 100%; }
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold">
+                Si Paling Warkop!
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-500">Home</a>
+                <a href="#tentang" class="hover:text-blue-500">Tentang</a>
+                <a href="#menu" class="hover:text-blue-500">Menu</a>
+                <a href="#kontak" class="hover:text-blue-500">Kontak</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="#home" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+            <a href="#tentang" class="block px-4 py-2 hover:bg-gray-100">Tentang</a>
+            <a href="#menu" class="block px-4 py-2 hover:bg-gray-100">Menu</a>
+            <a href="#kontak" class="block px-4 py-2 hover:bg-gray-100">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed navbar -->
+    <div class="h-16"></div>
+
+    <!-- Header Section -->
+    <header id="home" class="bg-transparent">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Si Paling Warkop!</h1>
+        <p class="mt-5 text-lg md:text-xl">
+            Tempat nongkrong termodis dengan vibes yang santai, kopi yang mantap, dan camilan anti gabut. 
+            Lokasi strategis, Wi-Fi kenceng, cocok buat sekedar ngopi, meet-up bareng bestie, atau nugas sampai pagi.
+        </p>
+    </header>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="bg-transparent">
+        <h2 class="text-3xl font-bold mb-8">Tentang Kami</h2>
+        <p class="mb-6">
+            "Si Paling Warkop!" lahir dari ide sederhana: pengin bikin tempat chill out yang beda dari warkop biasa. 
+            Di sini, lo bakal nemuin kombinasi antara desain interior aesthetic, menu-menu kekinian, 
+            serta barista yang gaul banget dan siap berbagi rekomendasi kopi favorit mereka.
+        </p>
+        <p>
+            Kami pengen bikin semua orang merasa betah, dari yang suka kopi sampai yang cuma numpang Wi-Fi. 
+            Kami percaya bahwa secangkir kopi enak dan suasana nyaman bisa bikin hari lo lebih berwarna.
+        </p>
+    </section>
+
+    <!-- Menu Favorite Section -->
+    <section id="menu" class="bg-transparent">
+        <h2 class="text-3xl font-bold mb-10">Menu Favorite</h2>
+        <div class="menu-list">
+            <div class="menu-item">
+                <img src="eskopi.jpg" alt="Kopi Susu Gak Basi" class="w-full h-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Kopi Susu Gak Basi</h3>
+                <p class="text-gray-600 mt-2">Kopi susu creamy yang manisnya pas. Ini menu paling best seller buat lo yang pengin sensasi nyaman.</p>
+            </div>
+            <div class="menu-item">
+                <img src="cendol.jpg" alt="Es Kopi Cendol Latte" class="w-full h-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Es Kopi Cendol Latte</h3>
+                <p class="text-gray-600 mt-2">Perpaduan unik latte dan cendol tradisional. Rasanya fresh, cocok diminum sambil gibah sama teman-teman.</p>
+            </div>
+            <div class="menu-item">
+                <img src="rotbak.jpg" alt="Roti Bakar Si Paling Legit" class="w-full h-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Roti Bakar Si Paling Legit</h3>
+                <p class="text-gray-600 mt-2">Roti bakar varian coklat-keju yang bikin lo auto kebawa mimpi. Mau nugas atau chill, roti ini pas banget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="bg-transparent">
+        <h2 class="text-3xl font-bold mb-6">Keep in Touch</h2>
+        <p class="mb-8">Yuk, follow dan kontak kami di social media. Jangan sampai ketinggalan promo dan event seru!</p>
+        <div class="social-links flex justify-center space-x-6">
+            <a href="#" target="_blank" class="hover:text-blue-500">Instagram</a>
+            <a href="#" target="_blank" class="hover:text-blue-500">TikTok</a>
+            <a href="#" target="_blank" class="hover:text-blue-500">WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-inner">
+        &copy; 2024 Si Paling Warkop! | All Rights Reserved
+    </footer>
+
+    <!-- TailwindJS for responsive navbar -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
